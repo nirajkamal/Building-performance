@@ -1,0 +1,45 @@
+First make sure you do the following in the PC(one time only) :
+1)Install python 3 (during installation, tick on "include python 3 to PATH")
+2)Run these commands in command prompt(copy-paste):
+pip install pandas
+pip install matplotlib
+pip install psychrochart
+pip install numpy
+
+delete the contents of result folder as you proceed to make a new processing.
+
+## About input file ##
+after doing error correction, do the following
+
+1)sort all the data in the respective columns in excel template (input.csv) and save it as csv in this directory.
+TA in -(air temperature in)
+TA out -(air temperature out)
+RH in -(Humidity Ratio inside)
+RH out - (Humidity Ratio outside)
+TWl-1 in -(wall surface temperature inside)
+TWl-1 out -(wall surface temperature outside)
+TWl-2 in -(wall surface temperature of second category wall inside)
+TWl-2 in -(wall surface temperature of second category wall outside)
+TRf in -(roof surface temperature inside)
+TRf out -(roof surface temperature outside)
+
+2)'TA in','TA out','RH in','RH out', - are mandatory, but if you do not have the data for other fields, enter '0' in the second row of that field and leave it blank.
+
+3)do not modify the fields in the first column. save it in csv format
+
+
+## open command prompt:
+
+1)type this command:
+ cd<space><path of the cuurent working directory>
+(you can drag and drop any file in the current directory in cmd and delete the file name to get the path)
+
+2)type this command:
+python main.py
+
+3) check if it throws an error. if it doesnt, it ran successfully. If it throws an error and terminates, send the copy of files in this directory and the error message to niraj, a rectified code will be sent back to you.
+
+
+## about output:
+
+1) if the above ran successfully, open results folder, to find the results.
