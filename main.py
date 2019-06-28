@@ -27,7 +27,18 @@ Wl_1Fac = list(data['Wl-1Facing'])
 Wl_1Fac = Wl_1Fac[0]
 Wl_2Fac = list(data['Wl-2Facing'])
 Wl_2Fac = Wl_2Fac[0]
-
+#headers for post2
+row2=[]
+row2.append('date and time')
+row2.append("TPI_wall1")
+row2.append("TPI_wall2")
+row2.append('TPI_roof')
+row2.append('Depreciation_factor')
+row2.append('Max_Damping_day')
+row2.append('Max_Damping_night')
+row2.append('Time_lag_day')
+row2.append('Time_lag_night')
+post2.append(row2)
 post.append(row)   
 for i in range(days):
     j = (i*24) + 1
@@ -150,6 +161,7 @@ for i in range(days):
     except:
         print('see all the values for TA')
     row2=[]
+    row.append(data['Date and Time'][j])
     row2.append(CTPI_1)
     row2.append(CTPI_2)
     row2.append(CTPI_r)
