@@ -174,14 +174,14 @@ for i in range(days):
     row2.append(Time_lag_night)
     post2.append(row2)
 
-with open("result/output.csv", "a") as fp:
+with open("result/output.csv", "a", newline='') as fp:
     wr = csv.writer(fp, dialect='excel')
     for i in post:
         wr.writerow(i)
 
 
         
-with open("result/performance-daily.csv", "a") as fp:
+with open("result/performance-daily.csv", "a", newline='') as fp:
     wr = csv.writer(fp, dialect='excel')
     for i in post2:
         wr.writerow(i)
@@ -295,7 +295,7 @@ for t in time:
     postcomf.append(row)   
 
 postcomf.append([vco,co,aw,unc])
-with open("result/comfort.csv", "a") as fp:
+with open("result/comfort.csv", "a", newline='') as fp:
     wr = csv.writer(fp, dialect='excel')
     for i in postcomf:
         wr.writerow(i)
@@ -307,6 +307,6 @@ for i in templ:
     template.append(i)
 
 
-with open("result/distribution.csv",'w') as fp:
+with open("result/distribution.csv",'w', newline ='') as fp:
     wr = csv.writer(fp,dialect = 'excel')
     wr.writerows (template)
