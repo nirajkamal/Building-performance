@@ -161,7 +161,7 @@ for i in range(days):
     except:
         print('see all the values for TA')
     row2=[]
-    row.append(data['Date and Time'][j])
+    row2.append(data['Date and Time'][j])
     row2.append(CTPI_1)
     row2.append(CTPI_2)
     row2.append(CTPI_r)
