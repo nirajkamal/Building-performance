@@ -164,6 +164,11 @@ with open("result/output.csv", "a") as fp:
     wr = csv.writer(fp, dialect='excel')
     for i in post:
         wr.writerow(i)
+        
+with open("result/performance-daily.csv", "a") as fp:
+    wr = csv.writer(fp, dialect='excel')
+    for i in post2:
+        wr.writerow(i)
 
 comf = pandas.read_csv('bin/comf.csv')
 awarm = pandas.read_csv('bin/accwarm.csv')
