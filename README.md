@@ -3,17 +3,17 @@ Codes written to process and output the results using sensor data from the build
 
 # parameters calculated
 # thermal comfort 
-Tropical summer index
-predicted mean vote
-predicteed percentage dissatisfied
-heat stress distribution
+Tropical summer index;
+predicted mean vote;
+predicteed percentage dissatisfied;
+heat stress distribution;
 fan wind velocity required
 
 # thermal performance
-damping percentage
-depreciation factor
-time lag
-thermal performance index
+damping percentage;
+depreciation factor;
+time lag;
+thermal performance index;
 instantaneous damping
 
 
