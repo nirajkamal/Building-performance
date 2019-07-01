@@ -37,6 +37,7 @@ TRf out -(roof surface temperature outside)
 2)type this command:
 python main.py
 
+change made
 3) check if it throws an error. if it doesnt, it ran successfully. If it throws an error and terminates, send the copy of files in this directory and the error message to niraj, a rectified code will be sent back to you.
 
 
