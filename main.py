@@ -30,7 +30,6 @@ for input in f:
           row.append(s+'(mintime)')
           row.append( s+'(mean)')
 #first row of output.csv
-
     Wl_1Fac = list(data['Wl-1Facing'])
     Wl_1Fac = Wl_1Fac[0]
     Wl_2Fac = list(data['Wl-2Facing'])
@@ -70,11 +69,19 @@ for input in f:
                 maxi = max(split)
                 try:
                     timemax = splitdate[split.index(maxi)].split( )[1]
+                    if splitdate[split.index(maxi)].split( )[-1] == 'PM':
+                        timemax = str(int(timemax.split(':')[0]) + 12 )
+                    else:
+                        timemax = str(timemax.split(':')[0])
                 except:
                     timemax = 'nan'
                 mini = min(split)
                 try:
                     timemin = splitdate[split.index(mini)].split( )[1]
+                    if splitdate[split.index(mini)].split( )[-1] == 'PM':
+                        timemin =  str (int(timemin.split(':')[0]) + 12 )
+                    else:
+                        timemin= str(timemin.split(':')[0])
                 except:
                     timemin = 'nan'
                 try:
@@ -187,17 +194,14 @@ for input in f:
         row2.append(Time_lag_day)
         row2.append(Time_lag_night)
         post2.append(row2)
-
-    with open("result/output-"+input+".csv", "a", newline='') as fp:
+    with open("result/"+input+"-output.csv", "a", newline='') as fp:
         wr = csv.writer(fp, dialect='excel')
         for i in post:
             wr.writerow(i)
-
-    with open("result/performance-daily-"+input+".csv", "a", newline='') as fp:
+    with open("result/"+input+"-performance-daily.csv", "a", newline='') as fp:
         wr = csv.writer(fp, dialect='excel')
         for i in post2:
             wr.writerow(i)
-
     comf = pandas.read_csv('bin/comf.csv')
     awarm = pandas.read_csv('bin/accwarm.csv')
     comb = pandas.read_csv('bin/combine.csv')
@@ -270,8 +274,9 @@ for input in f:
                 TSI = (0.308*tw) + (0.745*temp) - (2.06*(math.sqrt((0.9*warcom)+0.841)))
             except:
                 TSI = None
-
             tiime = t[1].split(':')
+            if t[-1] == 'PM':
+                tiime[0] =  str(int(tiime[0])+12)
             #   if (int(tiime[0])>7 & int(tiime[0])<23):
             #     Met = 1.7
             #else:
@@ -309,19 +314,15 @@ for input in f:
             row.append(model[3])
             row.append(model[4])
             postcomf.append(row)
-
     postcomf.append([vco,co,aw,unc])
-    with open("result/comfort-"+input+".csv", "a", newline='') as fp:
+    with open("result/"+input+"-comfort.csv", "a", newline='') as fp:
         wr = csv.writer(fp, dialect='excel')
         for i in postcomf:
             wr.writerow(i)
-
     templ = (templ/count)*100
-
     template = [hum2]
     for i in templ:
         template.append(i)
-
-    with open("result/distribution-"+input+".csv",'w', newline='') as fp:
+    with open("result/"+input+"-distribution.csv",'w', newline='') as fp:
         wr = csv.writer(fp,dialect = 'excel')
         wr.writerows (template)

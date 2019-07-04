@@ -1,0 +1,37 @@
+import pandas
+import csv
+import numpy
+import math
+
+data = pandas.read_csv('input.csv')
+index = list(data)
+time = list(data['date and time'])
+data = numpy.array(data)
+newdata =[]
+n=0
+for t in time:
+    ti = t.split(' ')
+    date = ti[0]
+    ti = ti[1]
+    minute = int(ti.split(':')[1])
+    hour =  int(ti.split(':')[0])
+    i = time.index(t)
+    rowlength = len(index)
+    adder = data[i][2:rowlength]
+    rowlength = len(index)-2
+    row = [0] * rowlength
+    sum = numpy.add(row,adder)
+    if minute == 30:
+        average = sum/n
+        average = numpy.append(average,hour)
+        average = numpy.append(average,date)
+        n=0
+        newdata.append(average)
+        row = [0] * rowlength
+        sum = numpy.add(row, adder)
+    n = n+1
+
+with open('output.csv','w', newline='') as fp:
+        wr = csv.writer(fp,dialect = 'excel')
+        wr.writerows (newdata)
+
