@@ -6,7 +6,7 @@ Sensors were deployed in various locations in Humanscapes habitat, and data on l
 
 The parameters calculated using the above data are as follows:
 ## thermal comfort 
-Tropical summer index;
+Tropical summer index; \n
 predicted mean vote;
 predicteed percentage dissatisfied;
 heat stress distribution;
