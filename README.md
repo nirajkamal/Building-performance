@@ -6,18 +6,26 @@ Sensors were deployed in various locations in Humanscapes habitat, and data on l
 
 The parameters calculated using the above data are as follows:
 ## thermal comfort 
-Tropical summer index; \n
+Tropical summer index;
+
 predicted mean vote;
+
 predicteed percentage dissatisfied;
+
 heat stress distribution;
-fan wind velocity required
+
+fan wind velocity required.
 
 ## thermal performance
 damping percentage;
+
 depreciation factor;
+
 time lag;
+
 thermal performance index;
-instantaneous damping
+
+instantaneous damping.
 
 
 other outputs include the maximum, minimum and average of all the readings on a daily basis. Using these parameters, the thermal performace of humanscapes habitat were calculated, and also strategies both active and passive were proposed to optimise the energy usage and thermal performance.
