@@ -10,13 +10,15 @@ The parameters calculated using the above data are as follows:
 ## Thermal comfort 
 Tropical summer index;
 
+Thermal Performance of the Building Envelope;
+
 Predicted mean vote;
 
-Predicteed percentage dissatisfied;
+Predicteed percentage dissatisfied (gives an idea of comfort levels at any time in the building);
 
 Heat stress distribution;
 
-Fan wind velocity required.
+Compute the Fan wind velocity required for optimal comfort for all times.
 
 ## Thermal performance
 damping percentage;
