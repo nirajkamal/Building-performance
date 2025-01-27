@@ -1,4 +1,4 @@
-### Update: Humanscapes project wins the Green Solutions Award in the UN COP26 summit 2021 at Glasgow!!
+### 🌍 Update: Humanscapes project wins the Green Solutions Award in the UN COP26 summit 2021 at Glasgow!!
 
 # Building-performance
 Python Script written to process and analyse the thermal performance of Humanscapes Habitat using sensor data from the buildings. The script also uses the datasets of ASHRAE and CBRI. 
